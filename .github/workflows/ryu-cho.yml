@@ -1,0 +1,49 @@
+name: ryu-cho
+
+on:
+  # Schedule the interval of the checks.
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  ryu-cho:
+    name: Ryu Cho
+    runs-on: ubuntu-latest
+    steps:
+      - uses: vuejs-translations/ryu-cho@v1
+        with:
+          # GitHub access token. Required.
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+
+          # Git user name to use when making issues and PRs. Required.
+          username: Ubugeeei
+
+          # Git email address to use when making issues and PRs. Required.
+          email: ubuge1122@gmail.com
+
+          # The url for the upstream repo. This is the repository that you
+          # set up Ryu-Cho. Required.
+          upstream-repo: https://github.com/vuejs-jp/learn.nuxt.com
+
+          # The branch for the upstream repo. Optional. Defaults to `main`.
+          upstream-repo-branch: main
+
+          # The head repo to track. This is the repository you want to
+          # take a diff. Required.
+          head-repo: https://github.com/nuxt/learn.nuxt.com
+
+          # The branch for the head repo. Optional. Defaults to `main`.
+          head-repo-branch: main
+
+          # The git commit sha of head repo to start tracking. Ryu-Cho will
+          # only track commit from this hash. Required.
+          track-from: c06f56f55a69e292d3975f83e148d299be0f8e1c
+
+          # File path to track. In this example, Ryu-Cho will only track
+          # commits that modified files under `docs` folder. Optional.
+          path-starts-with: ./
+
+          # GitHub workflow name that runs Ryu-Cho. This is required since
+          # Ryu-Cho determines the last run by looking into last workflow
+          # run timestamp. Optional. Defaults to `ryu-cho`.
+          workflow-name: ryu-cho
