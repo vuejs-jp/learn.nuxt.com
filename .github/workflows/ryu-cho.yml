@@ -1,9 +1,9 @@
 name: ryu-cho
 
 on:
-  # Schedule the interval of the checks.
+  # 1時間ごとに実行する
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 * * * *'
 
 jobs:
   ryu-cho:
