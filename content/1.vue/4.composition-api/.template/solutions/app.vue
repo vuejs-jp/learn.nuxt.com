@@ -1,0 +1,13 @@
+<script setup>
+const { count, doubled, increment } = useCounter()
+</script>
+
+<template>
+  <div>
+    <p>count is {{ count }}</p>
+    <p>doubled is {{ doubled }}</p>
+    <button @click="increment">
+      +1
+    </button>
+  </div>
+</template>
