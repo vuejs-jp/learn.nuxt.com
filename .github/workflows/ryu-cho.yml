@@ -1,9 +1,9 @@
 name: ryu-cho
 
 on:
-  # 1時間ごとに実行する
+  # 1日ごとに実行
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 0 * * *'
 
 jobs:
   ryu-cho:
