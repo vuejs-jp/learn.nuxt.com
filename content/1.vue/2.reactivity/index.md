@@ -4,35 +4,37 @@ ogImage: true
 
 # Reactivity Part 1
 
-Vue provides [a great reactivity system](https://vuejs.org/guide/essentials/reactivity-fundamentals.html) that tracks changes to the data and triggers updates automatically, allowing you to have your UI always up-to-date with the data. Vue's reactivity comes with a few primitives: `ref`, `reactive`, `computed` and `watch`.
+Vue はデータの変更を監視して、変更された時に更新を自動的にトリガーする[優れたリアクティビティシステム](https://vuejs.org/guide/essentials/reactivity-fundamentals.html)を提供していて、常に最新のデータをUIに反映させることができます。Vueのリアクティビティは、`ref`、`reactive`、`computed`、`watch` があります。
 
-- [`ref()`](https://vuejs.org/api/reactivity-core.html#ref) creates a container to hold a single value, that can be tracked automatically when the value changes. The value can be accessed or updated via `.value` property.
+- [`ref()`](https://vuejs.org/api/reactivity-core.html#ref)は単一の値を保持するためのコンテナを作成し、値が変更された時に自動的に追跡できるようにします。値は `.value` を通してアクセスすることができます。
 
-- [`computed()`](https://vuejs.org/api/reactivity-core.html#computed) takes a getter function and returns a `ref` object, that reflects the return value of the getter function.
+- [`computed()`](https://vuejs.org/api/reactivity-core.html#computed)は getter 関数を受け取り、getter からの返り値を反映した `ref` オブジェクトを返します。
 
-Here in the playground, we've created a ref object named `count` to hold a number, and a computed object named `double` that calculates the double of `count`. Vue will smartly know that `double` depends on `count`, so whenever `count` changes, `double` will re-calculate automatically.
+ここのプレイグラウンドでは、数字を保持するための `count` という名前の ref オブジェクトと、`count` の倍の値を計算する `double` という名前の computed オブジェクトを作成します。Vue は `double` が `count` に依存していることを知っているため、`count` が変更された際に `double` は自動で再計算されます。
 
-Try clicking the button to increase the `count` value - you will see that the value of `double` also reflects the change.
+ボタンをクリックして `count` の値が増やしてみてください。`double` の値も変更が反映されることを確認することができます。
 
 ::note
-**Note**: Refs will be [auto unwrapped by Vue](https://vuejs.org/guide/essentials/reactivity-fundamentals.html#declaring-reactive-state-1) when referenced in the `<template>`, The `.value` is only needed when accessing the ref in `<script>` or JavaScript outside of Vue components.
+**注意**: `<template>` 内で参照された場合、refs は Vue によって自動的にアンラップされます。`.value` は、`<script>` 内や Vue コンポーネント外の JavaScript でアクセスする時にのみ必要になります。
 ::
 
 ## Challenge
 
-Now let's get our hands on it! Try modifying the code to make the multiplier also reactively updatable (current hard-coded as `2`).
+では、実際にやってみましょう!
+現在 `2` 倍にハードコードされている乗数をリアクティブに更新可能にするコードに変更してみましょう。
 
-To do that, you can:
+そのためには:
 
-1. Create a variable named `multiplier` with `ref()` and set it to `2`
-2. Rename `double` to `result` in both the `<script>` and `<template>`
-3. Update the implementation of `result` to return `count.value * multiplier.value`{lang=js}
-4. Add another button to increase the `multiplier` value
+1. `ref()` を使って `multiplier` という名前の変数を作成し、`2` をセットします
+2. `<script>` と `<template>` の両方で、`double` を `result` にリネームします
+3. `result` の実装を `count.value * multiplier.value`{lang=js} を返すように変更します
+4. `multiplier` の値を増加させるための別のボタンを追加します
 
-That's it! Now when you click the multiplier button, you will see the result get changed with the new multiplier.
+以上です!
+multiplier ボタンを押下すると、新しい乗数による変更結果を確認することができます。
 
-If you get stuck, you can check the solution by clicking the button below, or on the top-right corner of the editor.
+もし行き詰まったら、以下のボタンかエディタの右上にあるボタンをクリックして回答を見ることができます。
 
 :ButtonShowSolution{.bg-faded.px4.py2.rounded.border.border-base.hover:bg-active.hover:text-primary.hover:border-primary:50}
 
-Feel free to play more to explore your ideas! Once you're are done, let's move on to the next section to learn a bit more about the reactivity system.
+アイデアを自由に試してみてください。終わったら、次のセクションに進んで、リアクティビティシステムについてさらに学びましょう。
