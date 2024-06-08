@@ -22,3 +22,5 @@ Nuxtでは、`composables/`ディレクトリにComposablesなロジックを格
 
 - Composableは関数として定義され、必要な状態やメソッドを返します。
 - `composables/`ディレクトリに作成したロジックは自動インポートが適用されます。
+
+:ButtonShowSolution{.bg-faded.px4.py2.rounded.border.border-base.hover:bg-active.hover:text-primary.hover:border-primary:50}
