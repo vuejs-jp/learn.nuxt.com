@@ -1,5 +1,5 @@
-<script setup>
-const count = ref(1)
+<script setup lang="ts">
+const count = ref<number>(1)
 const doubled = computed(() => count.value * 2)
 
 function increment() {
