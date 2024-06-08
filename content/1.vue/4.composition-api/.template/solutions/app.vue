@@ -6,7 +6,7 @@ const { count, doubled, increment } = useCounter()
   <div>
     <p>count is {{ count }}</p>
     <p>doubled is {{ doubled }}</p>
-    <button @click="increment">
+    <button type="button" @click="increment">
       +1
     </button>
   </div>
