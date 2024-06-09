@@ -1,18 +1,40 @@
-<script setup>
-const count = ref(1)
-const doubled = computed(() => count.value * 2)
+<script setup lang="ts">
+const todoId = ref(1)
+
+const todoData = reactive({
+  loading: false,
+  data: null,
+})
 
 function increment() {
-  count.value++
+  todoId.value++
 }
+
+async function fetchTodo() {
+  todoData.loading = true
+  try {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/comments/${todoId.value}`)
+    todoData.data = await res.json()
+  }
+  finally {
+    todoData.loading = false
+  }
+}
+
+watch(todoId, fetchTodo)
+
+fetchTodo()
 </script>
 
 <template>
   <div>
-    <p>count is {{ count }}</p>
-    <p>doubled is {{ doubled }}</p>
-    <button @click="increment">
-      +1
+    <p>ID: {{ todoId }}</p>
+    <button type="button" @click="increment">
+      次の TODO アイテムを取得
     </button>
+    <p v-if="todoData.loading">
+      Loading...
+    </p>
+    <pre v-else>{{ todoData.data }}</pre>
   </div>
 </template>
