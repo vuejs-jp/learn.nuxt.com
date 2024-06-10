@@ -2,10 +2,17 @@
 ogImage: true
 ---
 
-# Application Entry
+# アプリケーションのエントリ
 
-To give you the full control of your application, Nuxt allows you to define your own application entry `app.vue` to start minimal (optional).
+Nuxt では `app.vue` がアプリケーションのエントリーポイントとなっています。\
+アプリケーションを制御するために最小限の `app.vue` を定義して、自分自身のアプリケーションの実装を始めることができます。（任意）\
+この例ではメッセージを画面に出力するだけの単純な実装が行われています。
 
-// TODO:
+次のチャプターで説明する `pages/` ディレクトリはオプショナルで、存在しない場合は vue-router の依存関係を含めません。\
+これは、ルーティングが必要ないランディングページやアプリケーションを実装する際に便利です。
 
-To get more capabilities of your Nuxt app, let's continue with the [Routing](/concepts/routing) section to learn how we can make our app multi-page.
+また、`nuxt.config.ts` を通じてアプリケーションの設定を行うことができます。(`nuxt.config.js`, `nuxt.config.mjs` も同様にサポートしています。)\
+デフォルトでは、ほとんどのユースケースをカバーするように構成されており、必要に応じて設定を上書きすることができます。
+詳細なオプションに関しては [Nuxt 公式ドキュメント](https://nuxt.com/docs/getting-started/configuration) をご覧ください。
+
+Nuxt アプリの機能をさらに拡張するには、[Routing](/concepts/routing) セクションに進んで、アプリをマルチページにする方法を学びましょう。
