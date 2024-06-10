@@ -8,5 +8,10 @@
         Foo
       </NuxtLink>
     </div>
+    <div>
+      <NuxtLink to="/posts/1">
+        Posts/1
+      </NuxtLink>
+    </div>
   </div>
 </template>
