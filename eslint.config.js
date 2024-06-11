@@ -7,4 +7,10 @@ export default antfu(
     formatters: true,
   },
   nuxt,
+  {
+    files: ['**/.template/**'],
+    rules: {
+      'no-console': 'off',
+    },
+  },
 )
