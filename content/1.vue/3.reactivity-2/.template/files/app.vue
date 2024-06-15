@@ -13,7 +13,7 @@ function increment() {
 async function fetchTodo() {
   todoData.loading = true
   try {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/comments/${todoId.value}`)
+    const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${todoId.value}`)
     todoData.data = await res.json()
   }
   finally {
