@@ -24,3 +24,6 @@ jobs:
 
       - name: Typecheck
         run: pnpm run typecheck
+
+      - name: Textlint
+        run: pnpm run textlint
