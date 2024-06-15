@@ -28,7 +28,7 @@ fetchTodo()
 <template>
   <div>
     <p>ID: {{ todoData.id }}</p>
-    <button type="button" @click="increment">
+    <button type="button" :disabled="todoData.loading" @click="increment">
       Next Todo
     </button>
     <p v-if="todoData.loading">
