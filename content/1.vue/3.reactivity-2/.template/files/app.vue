@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const todoId = ref(1)
+let todoId = 1
 
 const todoData = reactive({
   loading: false,
@@ -7,13 +7,13 @@ const todoData = reactive({
 })
 
 function increment() {
-  todoId.value++
+  todoId++
 }
 
 async function fetchTodo() {
   todoData.loading = true
   try {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${todoId.value}`)
+    const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${todoId}`)
     todoData.data = await res.json()
   }
   finally {
