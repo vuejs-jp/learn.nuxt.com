@@ -11,7 +11,8 @@
     "typecheck": "nuxt typecheck",
     "prepare": "nuxt prepare && pnpm -C ./templates/basic install && pnpm -C ./templates/basic prepare",
     "lint": "eslint .",
-    "format": "eslint . --fix"
+    "format": "eslint . --fix",
+    "textlint": "textlint --format pretty-error content/**"
   },
   "dependencies": {
     "@shikijs/core": "^1.5.2",
@@ -31,6 +32,8 @@
     "shiki": "^1.5.2",
     "splitpanes": "^3.1.5",
     "strip-json-comments": "^5.0.1",
+    "textlint": "^14.0.4",
+    "textlint-rule-preset-vuejs-jp": "github:vuejs-jp/textlint-rule-preset-vuejs-jp",
     "theme-vitesse": "^0.8.0",
     "unified": "^11.0.4",
     "vue": "^3.4.27",
