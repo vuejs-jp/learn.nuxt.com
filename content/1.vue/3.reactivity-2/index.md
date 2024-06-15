@@ -30,7 +30,7 @@ console.log(counter.count) // -> 1
 
 ## チャレンジ問題
 
-今のプレイグラウンドは、TODO アイテムに関するデータを `todoId` と `todoData` の二つのリアクティブ値として管理しています。これらを一つの `todoData` にまとめましょう。
+今のプレイグラウンドは、TODO アイテムに関するデータを `todoId` と `todoData` の 2 つのリアクティブ値として管理しています。これらを 1 つの `todoData` にまとめましょう。
 これらのステップを実行することで、`reactive` と `watch` の理解を深めることができるのでぜひ挑戦してみてください！
 
 1. `todoData` に `id` プロパティを追加し、`todoId` を消しましょう。
@@ -42,4 +42,4 @@ console.log(counter.count) // -> 1
 もし手詰まりになったら、解決策を確認するためのボタンをクリックして、ヒントを得ることができます。
 :ButtonShowSolution{.bg-faded.px4.py2.rounded.border.border-base.hover:bg-active.hover:text-primary.hover:border-primary:50}
 
-ここまでで Vue のリアクティビティシステムの基礎について学びました。次のステップで、Vue の強力な機能の一つである「Composition API」について学びましょう！
+ここまでで Vue のリアクティビティシステムの基礎について学びました。次のステップで、Vue の強力な機能の 1 つとなっている「Composition API」について学びましょう！
