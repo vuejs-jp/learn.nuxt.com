@@ -4,7 +4,7 @@ ogImage: true
 
 # Reactivity Part 1
 
-Vue はデータの変更を監視して、変更された時に更新を自動的にトリガーする[優れたリアクティビティシステム](https://vuejs.org/guide/essentials/reactivity-fundamentals.html)を提供していて、常に最新のデータをUIに反映させることができます。Vueのリアクティビティは、`ref`、`reactive`、`computed`、`watch` があります。
+Vue はデータの変更を監視して、変更された時に更新を自動的にトリガーする[優れたリアクティビティシステム](https://vuejs.org/guide/essentials/reactivity-fundamentals.html)を提供していて、常に最新のデータを UI に反映させることができます。Vue のリアクティビティは、`ref`、`reactive`、`computed`、`watch` があります。
 
 - [`ref()`](https://vuejs.org/api/reactivity-core.html#ref)は単一の値を保持するためのコンテナを作成し、値が変更された時に自動的に追跡できるようにします。値は `.value` を通してアクセスすることができます。
 
@@ -20,7 +20,7 @@ Vue はデータの変更を監視して、変更された時に更新を自動�
 
 ## Challenge
 
-では、実際にやってみましょう!
+では、実際にやってみましょう！
 現在 `2` 倍にハードコードされている乗数をリアクティブに更新可能にするコードに変更してみましょう。
 
 そのためには:
@@ -30,7 +30,7 @@ Vue はデータの変更を監視して、変更された時に更新を自動�
 3. `result` の実装を `count.value * multiplier.value`{lang=js} を返すように変更します
 4. `multiplier` の値を増加させるための別のボタンを追加します
 
-以上です!
+以上です！
 multiplier ボタンを押下すると、新しい乗数による変更結果を確認することができます。
 
 もし行き詰まったら、以下のボタンかエディタの右上にあるボタンをクリックして回答を見ることができます。

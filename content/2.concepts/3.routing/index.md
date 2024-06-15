@@ -6,7 +6,7 @@ ogImage: true
 
 ## ファイルシステムルーター
 
-ファイルシステムルーターは Nuxt の主要機能の一つです。\
+ファイルシステムルーターは Nuxt の主要機能の 1 つです。\
 `pages/` ディレクトリ内の各 Vue ファイルが、それに対応する URL（ルート）を作成し、そのファイルの内容を表示します。\
 この例では、`pages/index.vue` が `/` に、`pages/foo.vue` が `/foo` に対応しています。\
 このルーティングは [vue-router](https://router.vuejs.org/) をベースに実装されています。
@@ -48,7 +48,7 @@ console.log(route.params.id)
 3. `[id].vue` ファイル内で `useRoute()` を使って params から `id` を取得し、画面に表示します。
 4. `pages/index.vue` と `pages/foo.vue` に `<NuxtLink>` コンポーネントを使って `/posts/[id]` にナビゲーションするリンクを作成します。\
    ここでは例として、`/posts/1` にナビゲーションするリンクを作成してみましょう。\
-   (実際には値は任意のもので構いません。)
+   (実際には値は任意のもので構いません)
 
 もし行き詰まったら、以下のボタンかエディタの右上にあるボタンをクリックして回答を見ることができます。
 
@@ -56,5 +56,5 @@ console.log(route.params.id)
 
 ---
 
-ここで登場した、`useRoute` 関数や `<NuxtLink>` コンポーネント、Nuxt のコアコンセプトの一つである Auto Imports によって自動的に import されるため、import 文を記載することなく利用することができます。\
+ここで登場した、`useRoute` 関数や `<NuxtLink>` コンポーネント、Nuxt のコアコンセプトの 1 つとなっている Auto Imports によって自動的に import されるため、import 文を記載することなく利用することができます。\
 [Auto Imports](/concepts/auto-imports) について次のセクションでより詳しく学びましょう。
