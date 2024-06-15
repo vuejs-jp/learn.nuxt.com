@@ -1,25 +1,39 @@
-<script setup>
-const count = ref(1)
-const multiplier = ref(2)
-const result = computed(() => count.value * multiplier.value)
+<script setup lang="ts">
+const todoData = reactive({
+  id: 1,
+  loading: false,
+  data: null,
+})
 
 function increment() {
-  count.value++
+  todoData.id++
 }
-function multiply() {
-  multiplier.value++
+
+async function fetchTodo() {
+  todoData.loading = true
+  try {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${todoData.id}`)
+    todoData.data = await res.json()
+  }
+  finally {
+    todoData.loading = false
+  }
 }
+
+watch(() => todoData.id, fetchTodo, { immediate: true })
+
+fetchTodo()
 </script>
 
 <template>
   <div>
-    <p>count is {{ count }}</p>
-    <p>result is {{ result }}</p>
-    <button @click="increment">
-      +1
+    <p>ID: {{ todoData.id }}</p>
+    <button type="button" :disabled="todoData.loading" @click="increment">
+      Next Todo
     </button>
-    <button @click="multiply">
-      x{{ multiplier }}
-    </button>
+    <p v-if="todoData.loading">
+      Loading...
+    </p>
+    <pre v-else>{{ todoData.data }}</pre>
   </div>
 </template>
