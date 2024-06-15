@@ -21,9 +21,7 @@ async function fetchTodo() {
   }
 }
 
-watch(todoId, fetchTodo)
-
-fetchTodo()
+watch(todoId, fetchTodo, { immediate: true })
 </script>
 
 <template>

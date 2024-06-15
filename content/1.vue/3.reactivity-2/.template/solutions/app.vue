@@ -20,7 +20,7 @@ async function fetchTodo() {
   }
 }
 
-watch(() => todoData.id, fetchTodo)
+watch(() => todoData.id, fetchTodo, { immediate: true })
 
 fetchTodo()
 </script>
