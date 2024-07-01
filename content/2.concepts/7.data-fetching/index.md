@@ -2,13 +2,15 @@
 ogImage: true
 ---
 
-# Data Fetching
+# データフェッチ
 
-<!-- TODO:
-  - What is Data Fetching?
-  - useFetch, $fetch, useAsyncData
-  - SSR (default)
-  - CSR
-  - SSG
-  - ISR (?)
--->
+実用的なアプリケーションを作る上で、データフェッチは欠かせない機能です。
+データフェッチとは API やデータベースからデータを取得してくることを指します。
+
+Nuxt では、このデータフェッチを便利に扱うために `useFetch`、 `useAsyncData`、`$fetch` といった関数を提供しています。
+
+一言で言えば、
+
+- `useFetch` は、コンポーネントのセットアップ関数でデータのフェッチを処理する最も簡単な方法です。
+- `fetch` は、ユーザーのインタラクションに基づいてネットワークリクエストを行うのに最適です。
+- `useAsyncData` は、`$fetch` と組み合わせることで、よりきめ細かい制御を提供します。
