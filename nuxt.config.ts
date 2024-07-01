@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     // local
     '~/modules/template-loader',
     '~/modules/nuxt-link',
-    "@nuxt/image"
+    '@nuxt/image',
   ],
   colorMode: {
     classSuffix: '',
