@@ -9,7 +9,13 @@ const { data: todos, refresh } = useFetch('/api/todos')
 
   <ul>
     <li v-for="todo in todos" :key="todo.id">
-      {{ todo.title }}
+      <span :class="{ completed: todo.completed }">{{ todo.title }}</span>
     </li>
   </ul>
 </template>
+
+<style scoped>
+.completed {
+  text-decoration: line-through;
+}
+</style>
