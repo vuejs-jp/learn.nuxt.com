@@ -12,10 +12,10 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     'nuxt-icon',
     '@nuxt/eslint',
-
     // local
     '~/modules/template-loader',
     '~/modules/nuxt-link',
+    '@nuxt/image',
   ],
   colorMode: {
     classSuffix: '',
