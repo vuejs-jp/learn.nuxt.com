@@ -15,10 +15,10 @@ function multiply() {
   <div>
     <p>count is {{ count }}</p>
     <p>result is {{ result }}</p>
-    <button @click="increment">
+    <button type="button" @click="increment">
       +1
     </button>
-    <button @click="multiply">
+    <button type="button" @click="multiply">
       x{{ multiplier }}
     </button>
   </div>
