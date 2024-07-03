@@ -55,4 +55,27 @@ definePageMeta({
 </template>
 ```
 
-このプレイグランドの例では、
+## ミドルウェアの実行タイミング
+
+これらのミドルウェアは、クライアント上でのナビゲーション時はもちろん、SSR または SSG でのページ生成時にもサーバーサイドで実行されます。\
+ミドルウェアでローカルストレージなどのクライアントサイドの API を使用する場合は、クライアントサイドのみで実行されるようにする必要があります。\
+`import.meta` を使うことで実行している環境を判定することができます。サーバーサイドでの実行スキップする場合は `import.meta.server` を利用します。
+
+```ts
+export default defineNuxtRouteMiddleware((to) => {
+  // skip middleware on server
+  if (import.meta.server)
+    return
+
+  // some processing
+  window.localStorage.setItem('key', 'value')
+})
+```
+
+## チャレンジ
+
+localStorage の情報を読み取って、特定の値がある場合のみ `/foo` にアクセス可能にするミドルウェアを作成してみましょう。\
+今回は例として、`isSignedIn` というキーに `true` が設定されている場合のみ `/foo` にアクセス可能にするミドルウェアを作成します。\
+値のセットは `index.vue` から行えるようにボタンを設置してみましょう。
+
+:ButtonShowSolution{.bg-faded.px4.py2.rounded.border.border-base.hover:bg-active.hover:text-primary.hover:border-primary:50}
