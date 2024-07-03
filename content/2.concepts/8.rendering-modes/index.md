@@ -2,14 +2,8 @@
 ogImage: true
 ---
 
-# レンダリングモード
 
-<!-- TODO:
-  - Universal Rendering (as default)
-  - Client-side Rendering
-  - Hybrid Rendering
-  - Edge-Side Rendering?
--->
+# レンダリングモード
 
 Nuxt は様々なレンダリングモードをサポートしています。\
 具体的には、ユニバーサルレンダリング、クライアントサイドレンダリング、ハイブリッドレンダリングがあります。
