@@ -1,5 +1,5 @@
-# Vue Basics Summary
+# Vueの基本のまとめ
 
-Great! You've learned the basics of Vue. If you are interested in learning more about Vue, check out the [official Vue documentation](https://vuejs.org/) for more in-depth guides and tutorials.
+おめでとうございます！これでVueの基本を学び終わりました。さらにVueについて学びたい場合は、[公式のVueドキュメント](https://vuejs.org/)をご覧ください。より詳しいガイドやチュートリアルが用意されています。
 
-Up next, let's start to explore how Nuxt would make your development experience even better.
+次は、Nuxtがどのようにあなたの開発体験をさらに向上させるかを見ていきましょう。
