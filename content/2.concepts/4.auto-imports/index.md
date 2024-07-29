@@ -43,7 +43,7 @@ export default defineNuxtConfig({
 
 ## チャレンジ
 
-実際に utils ディレクトリを作成して、Auto Import 可能な関数を実装してみましょう。
+実際に utils/double.ts ファイルに対して、Auto Import 可能な関数を実装してみましょう。
 
 関数は任意のもので構いませんが、例として「与えられた数値を二倍にして返す `double()` 関数」を実装してみましょう。\
 関数が実装できたら、`app.vue` 内の template で使用して、2 倍された数値を画面に表示してみましょう。
