@@ -15,7 +15,7 @@ Nuxt では、`composables/` ディレクトリに Composables なロジック�
 それでは、これらの特徴を踏まえて以下のステップでロジックを Composables として切り出し、再利用してみましょう。
 
 1. 既存の vue ファイル（`app.vue`）の確認してください。
-2. カウンターロジックを Composable として切り出してください。具体的には `composables/` フォルダを作成し、その中に `useCounter.ts` というファイルを作成してください。
+2. カウンターロジックを `composables/useCounter.ts` に切り出してください。
 3. `app.vue` に 2 で切り出したロジックを適用してください。
 
 ## ヒント
