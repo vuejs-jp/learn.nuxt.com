@@ -2,7 +2,6 @@
 ogImage: true
 ---
 
-
 # レンダリングモード
 
 Nuxt は様々なレンダリングモードをサポートしています。\
@@ -114,7 +113,7 @@ export default defineNuxtConfig({
 そのためには:
 
 1. `app.vue` で `NuxtPage` コンポーネントを使って、ページをレンダリングします。
-2. `/pages/index.vue` と `/pages/foo.vue` を作成し、`script setup` 内コンソールの出力を行います。(内容は任意のもので構いません)
+2. `/pages/index.vue` と `/pages/foo.vue` で、`script setup` 内コンソールの出力を行います。(内容は任意のもので構いません)
 3. `nuxt.config` に `routeRules` を設定し、`/` と `/foo` に対して異なるキャッシュ ルールとレンダリングモードを設定します。\
    今回は、`/foo` に `ssr: false` を設定してみましょう。
 4. `/` にアクセスし、コンソールの出力がサーバーとクライアントの両方で行われていることを確認します。

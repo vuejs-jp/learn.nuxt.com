@@ -38,15 +38,13 @@ console.log(route.params.id)
 
 ## チャレンジ
 
-`/posts/[id]` というルートを作成し、 `/`, `/foo` からナビゲーション出来るように実装してみましょう。
+`/posts/[id]` というルートに対して、 `/`, `/foo` からナビゲーション出来るように実装してみましょう。
 `/posts/[id]` では、ルートパラメータから `id` を読み取り、その値を画面に表示してみましょう。
 
 そのためには:
 
-1. `pages` ディレクトリに `posts` ディレクトリを作成します。
-2. `pages/posts` ディレクトリ内に `[id].vue` ファイルを作成します。
-3. `[id].vue` ファイル内で `useRoute()` を使って params から `id` を取得し、画面に表示します。
-4. `pages/index.vue` と `pages/foo.vue` に `<NuxtLink>` コンポーネントを使って `/posts/[id]` にナビゲーションするリンクを作成します。\
+1. `pages/posts/[id].vue` ファイル内で `useRoute()` を使って params から `id` を取得し、画面に表示します。
+2. `pages/index.vue` と `pages/foo.vue` に `<NuxtLink>` コンポーネントを使って `/posts/[id]` にナビゲーションするリンクを作成します。\
    ここでは例として、`/posts/1` にナビゲーションするリンクを作成してみましょう。\
    (実際には値は任意のもので構いません)
 
