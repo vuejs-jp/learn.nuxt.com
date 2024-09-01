@@ -20,13 +20,13 @@ console.log(counter.count) // -> 1
 
 ::note
 **注意**: よくある間違いとして、`ref` はプリミティブな値のみに対応し、オブジェクトには `reactive` を使うという誤解があります。実際は `ref` でも `ref({ count: 0 })` のようにオブジェクトをリアクティブな値として宣言することができます。
-また、`reactive` には[いくつかの制限事項がある](https://ja.vuejs.org/guide/essentials/reactivity-fundamentals#limitations-of-reactive)ため、リアクティブな状態を宣言する際は基本的に `ref` を用いるのが推奨されます。
+また、`reactive` には [いくつかの制限事項がある](https://ja.vuejs.org/guide/essentials/reactivity-fundamentals#limitations-of-reactive) ため、リアクティブな状態を宣言する際は基本的に `ref` を用いるのが推奨されます。
 ::
 
 `watch` は `computed` と同様にリアクティブ値の変化に応じて作用しますが、主に `console.log` や `fetch` のような副作用をリアクティブに実行するときに使います。
 プレイグラウンドでは、サーバーで管理している TODO アイテムを表示していますが、表示する ID が変化したときに新しいアイテムを取得するために `watch` による監視をしています。
 
-`watch` に関する詳しい説明は[ウォッチャーガイド](https://ja.vuejs.org/guide/essentials/watchers)を参照してください。
+`watch` に関する詳しい説明は [ウォッチャーガイド](https://ja.vuejs.org/guide/essentials/watchers) を参照してください。
 
 ## チャレンジ問題
 
