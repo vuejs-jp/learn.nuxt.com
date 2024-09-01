@@ -28,7 +28,7 @@ console.log(counter.count) // -> 1
 
 `watch` に関する詳しい説明は [ウォッチャーガイド](https://ja.vuejs.org/guide/essentials/watchers) を参照してください。
 
-## チャレンジ問題
+## チャレンジ
 
 今のプレイグラウンドは、TODO アイテムに関するデータを `todoId` と `todoData` の 2 つのリアクティブ値として管理しています。これらを 1 つの `todoData` にまとめましょう。
 これらのステップを実行することで、`reactive` と `watch` の理解を深めることができるのでぜひ挑戦してみてください！

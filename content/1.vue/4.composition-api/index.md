@@ -10,7 +10,7 @@ Composables の主な特徴は以下の通りです。
 
 Nuxt では、`composables/` ディレクトリに Composables なロジックを格納することが多く、[自動インポート](https://nuxt.com/docs/examples/features/auto-imports) の対象になります。
 
-## チャレンジ問題
+## チャレンジ
 
 それでは、これらの特徴を踏まえて以下のステップでロジックを Composables として切り出し、再利用してみましょう。
 
