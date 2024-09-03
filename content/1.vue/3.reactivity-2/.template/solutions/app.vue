@@ -1,39 +1,41 @@
 <script setup lang="ts">
-const todoData = reactive({
+const state = ref<{
+  id: number
+  loading: boolean
+  data: { userId: number, id: number, title: string, completed: boolean } | null
+}>({
   id: 1,
   loading: false,
   data: null,
 })
 
 function increment() {
-  todoData.id++
+  state.value.id++
 }
 
 async function fetchTodo() {
-  todoData.loading = true
+  state.value.loading = true
   try {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${todoData.id}`)
-    todoData.data = await res.json()
+    const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${state.value.id}`)
+    state.value.data = await res.json()
   }
   finally {
-    todoData.loading = false
+    state.value.loading = false
   }
 }
 
-watch(() => todoData.id, fetchTodo, { immediate: true })
-
-fetchTodo()
+watch(() => state.value.id, fetchTodo, { immediate: true })
 </script>
 
 <template>
   <div>
-    <p>ID: {{ todoData.id }}</p>
-    <button type="button" :disabled="todoData.loading" @click="increment">
-      Next Todo
+    <p>ID: {{ state.id }}</p>
+    <button type="button" :disabled="state.loading" @click="increment">
+      次の TODO アイテムを取得
     </button>
-    <p v-if="todoData.loading">
+    <p v-if="state.loading">
       Loading...
     </p>
-    <pre v-else>{{ todoData.data }}</pre>
+    <pre v-else>{{ state.data }}</pre>
   </div>
 </template>
