@@ -2,13 +2,13 @@
 ogImage: true
 ---
 
-# Auto Imports
+# 自動インポート
 
-Auto Imports も Nuxt のコアコンセプトの 1 つです。
+自動インポートも Nuxt のコアコンセプトの 1 つです。
 
 https://nuxt.com/docs/guide/concepts/auto-imports
 
-Auto Imports は明示的にインポートすることなく、コンポーネント、コンポーザブル、および [Vue.js の API](https://vuejs.org/api/) をアプリケーション全体で使用できるように自動的にインポートする機能です。\
+自動インポートは明示的にインポートすることなく、コンポーネント、コンポーザブル、および [Vue.js の API](https://vuejs.org/api/) をアプリケーション全体で使用できるように自動的にインポートする機能です。\
 従来のグローバル宣言とは異なり、Nuxt は型情報や IDE の補完、ヒントを保持し、本番コードで使用されているもののみを含めます。
 
 Nuxt のディレクトリ構造の規約おかげで、 `components/`、`composables/`、および `utils/` を自動的にインポートすることができます。\
@@ -29,7 +29,7 @@ const count = ref(1)
 const double = computed(() => count.value * 2)
 ```
 
-Auto Imports 機能は `nuxt.config.ts` でオプトアウトすることも可能です。\
+自動インポート機能は `nuxt.config.ts` でオプトアウトすることも可能です。\
 この場合は上記の明示的なインポートが必要になります。
 
 ```ts
@@ -43,7 +43,7 @@ export default defineNuxtConfig({
 
 ## チャレンジ
 
-実際に utils/double.ts ファイルに対して、Auto Import 可能な関数を実装してみましょう。
+実際に utils/double.ts ファイルに対して、自動インポート可能な関数を実装してみましょう。
 
 関数は任意のもので構いませんが、例として「与えられた数値を二倍にして返す `double()` 関数」を実装してみましょう。\
 関数が実装できたら、`app.vue` 内の template で使用して、2 倍された数値を画面に表示してみましょう。
