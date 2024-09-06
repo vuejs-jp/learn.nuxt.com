@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ChildComponent from './ChildComponent.vue'
+import Child from './Child.vue'
 
 const name = ref('John Doe')
 
@@ -12,9 +12,9 @@ function updateName(value: string) {
   <div>
     <h1>Parent Component</h1>
     <p>Hi, {{ name }} 👋</p>
-    <ChildComponent
+    <Child
       message="Hello from Parent!"
-      :name="name"
+      :name
       @update:name="updateName"
     />
   </div>

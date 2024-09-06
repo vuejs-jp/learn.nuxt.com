@@ -1,18 +1,26 @@
 <script setup lang="ts">
 defineProps<{
   message: string
+  name: string
 }>()
 
-const name = defineModel<string>()
+const emit = defineEmits<{
+  'update:name': [name: string]
+}>()
+
+defineSlots<{
+  paragraph: () => any
+}>()
 </script>
 
 <template>
   <div class="child-component">
     <h2>Child Component</h2>
-    <p>{{ message }}</p>
+    <p><slot name="paragraph" /></p>
     <input
-      v-model="name"
       type="text"
+      :value="name"
+      @input="emit('update:name', $event.target.value)"
     >
   </div>
 </template>
