@@ -49,6 +49,7 @@
     "@nuxt/icon": "^1.4.7",
     "@nuxt/image": "^1.7.0",
     "@nuxt/kit": "^3.12.4",
+    "@nuxthub/core": "^0.7.14",
     "@nuxtjs/color-mode": "^3.4.4",
     "@nuxtjs/seo": "2.0.0-rc.10",
     "@pinia/nuxt": "^0.5.3",
