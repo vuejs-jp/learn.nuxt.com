@@ -59,11 +59,12 @@ definePageMeta({
 
 これらのミドルウェアは、クライアント上でのナビゲーション時はもちろん、SSR または SSG でのページ生成時にもサーバーサイドで実行されます。\
 ミドルウェアでローカルストレージなどのクライアントサイドの API を使用する場合は、クライアントサイドのみで実行されるようにする必要があります。\
-`import.meta` を使うことで実行している環境を判定することができます。サーバーサイドでの実行スキップする場合は `import.meta.server` を利用します。
+`import.meta` を使うことで実行している環境を判定することができます。
+サーバーサイドでの実行スキップする場合は `import.meta.server` を利用します。
 
 ```ts
 export default defineNuxtRouteMiddleware((to) => {
-  // skip middleware on server
+  // skip middleware on server (if (import.meta.client) { ... } でも同様)
   if (import.meta.server)
     return
 

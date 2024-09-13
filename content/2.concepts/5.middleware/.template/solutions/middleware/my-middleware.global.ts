@@ -1,9 +1,9 @@
 export default defineNuxtRouteMiddleware((to) => {
-  // FIXME: import . meta . server が置換されてしまう
-  if (import.meta.server)
+  // import.meta を利用した分岐でも OK
+  if (!window?.localStorage)
     return
 
-  const isSignedIn = JSON.parse(localStorage.getItem('isSignedIn') || 'false')
+  const isSignedIn = JSON.parse(window.localStorage.getItem('isSignedIn') || 'false')
 
   if (!isSignedIn && to.path !== '/') {
     return navigateTo('/')

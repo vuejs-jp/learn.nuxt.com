@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const count = ref(1)
 const multiplier = ref(2)
 const result = computed(() => count.value * multiplier.value)
@@ -6,6 +6,7 @@ const result = computed(() => count.value * multiplier.value)
 function increment() {
   count.value++
 }
+
 function multiply() {
   multiplier.value++
 }
