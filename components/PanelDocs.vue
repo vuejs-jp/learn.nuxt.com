@@ -63,6 +63,31 @@ const sourceUrl = computed(() =>
     : undefined,
 )
 
+const threadIdMappings: { [key: string]: number } = {
+  '0.index.md': 85,
+  '1.vue/1.index.md': 68,
+  '1.vue/2.reactivity/index.md': 71,
+  '1.vue/3.reactivity-2/index.md': 72,
+  '1.vue/4.composition-api/index.md': 73,
+  '1.vue/5.components/index.md': 74,
+  '1.vue/6.summary/index.md': 75,
+  '2.concepts/1.index.md': 76,
+  '2.concepts/2.app-vue/index.md': 77,
+  '2.concepts/3.routing/index.md': 78,
+  '2.concepts/4.auto-imports/index.md': 79,
+  '2.concepts/5.middleware/index.md': 80,
+  '2.concepts/6.layout/index.md': 81,
+  '2.concepts/7.rendering-modes/index.md': 82,
+  '2.concepts/8.state-manegement/index.md': 83,
+  '2.concepts/9.data-fetching/index.md': 84,
+}
+
+const threadUrl = computed(() =>
+  page.value?._file
+    ? `https://github.com/vuejs-jp/learn.nuxt.com/discussions/${threadIdMappings[page.value._file]}`
+    : undefined,
+)
+
 const docsEl = ref<HTMLElement | null>(null)
 const router = useRouter()
 router.beforeEach(() => {
@@ -118,7 +143,7 @@ router.beforeEach(() => {
             />
           </div>
         </div>
-        <div border="t base dashed" mt-8 p3>
+        <div flex="~ items-center gap-4" border="t base dashed" mt-8 p3>
           <NuxtLink
             v-if="sourceUrl"
             :to="sourceUrl" target="_blank"
@@ -128,6 +153,17 @@ router.beforeEach(() => {
           >
             <div i-ph-note-pencil-duotone />
             Edit this page
+          </NuxtLink>
+          <NuxtLink
+            v-if="threadUrl"
+            :to="threadUrl"
+            target="_blank"
+            flex="~ items-center gap-2"
+            text-inherit op75
+            hover="text-primary op100"
+          >
+            <div i-ph-arrow-square-out-fill />
+            Ask your question
           </NuxtLink>
         </div>
       </article>
