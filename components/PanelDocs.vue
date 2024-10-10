@@ -63,7 +63,8 @@ const sourceUrl = computed(() =>
     : undefined,
 )
 
-const threadIdMappings: { [key: string]: number } = {
+// NOTE: remove when hands-on finished (will be held on 2024-10-19)
+const THREAD_ID_MAP = {
   '0.index.md': 85,
   '1.vue/1.index.md': 68,
   '1.vue/2.reactivity/index.md': 71,
