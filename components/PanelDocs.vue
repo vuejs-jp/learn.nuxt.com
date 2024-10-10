@@ -81,7 +81,7 @@ const THREAD_ID_MAP = {
   '2.concepts/7.rendering-modes/index.md': 82,
   '2.concepts/8.state-manegement/index.md': 83,
   '2.concepts/9.data-fetching/index.md': 84,
-}
+} as const satisfies Record<string, number>
 
 const threadUrl = computed(() =>
   page.value?._file && threadIdMappings[page.value._file]
