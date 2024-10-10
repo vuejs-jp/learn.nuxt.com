@@ -84,7 +84,7 @@ const THREAD_ID_MAP = {
 }
 
 const threadUrl = computed(() =>
-  page.value?._file
+  page.value?._file && threadIdMappings[page.value._file]
     ? `https://github.com/vuejs-jp/learn.nuxt.com/discussions/${threadIdMappings[page.value._file]}`
     : undefined,
 )
