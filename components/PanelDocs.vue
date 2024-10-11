@@ -167,6 +167,7 @@ router.beforeEach(() => {
             <div i-ph-arrow-square-out-fill />
             Ask your question
           </NuxtLink>
+          <!-- NOTE: remove when hands-on finished (will be held on 2024-10-19) -->
           <NuxtLink
             to="https://forms.gle/3WcTUaNsUEqPK4R19"
             target="_blank"
