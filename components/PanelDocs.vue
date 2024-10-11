@@ -65,7 +65,7 @@ const sourceUrl = computed(() =>
 )
 
 // NOTE: remove when hands-on finished (will be held on 2024-10-19)
-const THREAD_ID_MAP = {
+const THREAD_ID_MAP: Readonly<Record<string, number>> = {
   '0.index.md': 85,
   '1.vue/1.index.md': 68,
   '1.vue/2.reactivity/index.md': 71,
@@ -82,16 +82,13 @@ const THREAD_ID_MAP = {
   '2.concepts/7.rendering-modes/index.md': 82,
   '2.concepts/8.state-manegement/index.md': 83,
   '2.concepts/9.data-fetching/index.md': 84,
-} as const satisfies Record<string, number>
+}
 
-type ThreadIdMapKey = keyof typeof THREAD_ID_MAP
-
-const threadUrl = computed(() => {
-  if (page.value?._file) {
-    const threadId = THREAD_ID_MAP[page.value._file as ThreadIdMapKey]
-    return `https://github.com/vuejs-jp/learn.nuxt.com/discussions/${threadId}`
-  }
-})
+const threadUrl = computed<string | null>(() =>
+  page.value?._file && THREAD_ID_MAP[page.value._file]
+    ? `https://github.com/vuejs-jp/learn.nuxt.com/discussions/${THREAD_ID_MAP[page.value._file]}`
+    : null,
+)
 
 const docsEl = ref<HTMLElement | null>(null)
 const router = useRouter()
