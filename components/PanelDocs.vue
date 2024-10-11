@@ -167,6 +167,16 @@ router.beforeEach(() => {
             <div i-ph-arrow-square-out-fill />
             Ask your question
           </NuxtLink>
+          <NuxtLink
+            to="https://forms.gle/3WcTUaNsUEqPK4R19"
+            target="_blank"
+            flex="~ items-center gap-2"
+            text-inherit op75
+            hover="text-primary op100"
+          >
+            <div i-ph-arrow-square-out-fill />
+            take a questionnaire
+          </NuxtLink>
         </div>
       </article>
       <!-- Navigration Dropdown -->
