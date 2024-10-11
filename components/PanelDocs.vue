@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/return-in-computed-property -->
 <script setup lang="ts">
 import type { NavItem, ParsedContent } from '@nuxt/content'
 
@@ -83,11 +84,14 @@ const THREAD_ID_MAP = {
   '2.concepts/9.data-fetching/index.md': 84,
 } as const satisfies Record<string, number>
 
-const threadUrl = computed(() =>
-  page.value?._file && threadIdMappings[page.value._file]
-    ? `https://github.com/vuejs-jp/learn.nuxt.com/discussions/${threadIdMappings[page.value._file]}`
-    : undefined,
-)
+type ThreadIdMapKey = keyof typeof THREAD_ID_MAP
+
+const threadUrl = computed(() => {
+  if (page.value?._file) {
+    const threadId = THREAD_ID_MAP[page.value._file as ThreadIdMapKey]
+    return `https://github.com/vuejs-jp/learn.nuxt.com/discussions/${threadId}`
+  }
+})
 
 const docsEl = ref<HTMLElement | null>(null)
 const router = useRouter()
