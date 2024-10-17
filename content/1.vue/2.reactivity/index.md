@@ -10,9 +10,9 @@ Vue はデータの変更を監視して、変更された時に更新を自動�
 
 - [`computed()`](https://ja.vuejs.org/api/reactivity-core#computed) は getter 関数を受け取り、getter からの返り値を反映した `ref` オブジェクトを返します。
 
-ここのプレイグラウンドでは、数字を保持するための `count` という名前の ref オブジェクトと、`count` の倍の値を計算する `double` という名前の computed オブジェクトを作成します。Vue は `double` が `count` に依存していることを知っているため、`count` が変更された際に `double` は自動で再計算されます。
+ここのプレイグラウンドでは、数字を保持するための `count` という名前の ref オブジェクトと、`count` の倍の値を計算する `doubled` という名前の computed オブジェクトを作成します。Vue は `doubled` が `count` に依存していることを知っているため、`count` が変更された際に `doubled` は自動で再計算されます。
 
-ボタンをクリックして `count` の値が増やしてみてください。`double` の値も変更が反映されることを確認することができます。
+ボタンをクリックして `count` の値が増やしてみてください。`doubled` の値も変更が反映されることを確認することができます。
 
 ::note
 **注意**: `<template>` 内で参照された場合、refs は Vue によって自動的にアンラップされます。`.value` は、`<script>` 内や Vue コンポーネント外の JavaScript でアクセスする時にのみ必要になります。
@@ -26,7 +26,7 @@ Vue はデータの変更を監視して、変更された時に更新を自動�
 そのためには:
 
 1. `ref()` を使って `multiplier` という名前の変数を作成し、`2` をセットします
-2. `<script>` と `<template>` の両方で、`double` を `result` にリネームします
+2. `<script>` と `<template>` の両方で、`doubled` を `result` にリネームします
 3. `result` の実装を `count.value * multiplier.value`{lang=js} を返すように変更します
 4. `multiplier` の値を増加させるための別のボタンを追加します
 
