@@ -15,8 +15,8 @@ Nuxt では、特定のルートにナビゲートする前にコードを実行
 グローバルミドルウェアは以下のように定義することができます。
 
 ```
-middleware/
-  --| hello.global.ts
+-| middleware/
+  ---| hello.global.ts
 ```
 
 ```ts
@@ -31,8 +31,8 @@ export default defineNuxtRouteMiddleware(() => {
 ページ単位のミドルウェアは以下のように定義することができます。
 
 ```
-middleware/
-  --| helloA.ts
+-| middleware/
+  ---| helloA.ts
 ```
 
 ```ts
