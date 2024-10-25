@@ -17,7 +17,7 @@ Nuxt のディレクトリ構造の規約おかげで、 `components/`、`compos
 
 また、Nuxt はいくつかのコンポーネントやコンポーザブル、ユーティリティも提供しています。
 [ルーティング](/concepts/routing) のセクションで登場した `NuxtLink` コンポーネントがその一例です。\
-他にも、データフェッチで利用する `useFetch()` コンポーザブルやランタイムの設定にアクセスる `useRuntimeConfig()` コンポーザブル、ページナビゲーションのための `navigateTo()` ユーティリティ関数などがあります。\
+他にも、データフェッチで利用する `useFetch()` コンポーザブルやランタイムの設定にアクセスする `useRuntimeConfig()` コンポーザブル、ページナビゲーションのための `navigateTo()` ユーティリティ関数などがあります。\
 たくさんあるので、そのほかのものは Nuxt 公式ドキュメントの [Components](https://nuxt.com/docs/api/components)、[Composables](https://nuxt.com/docs/api/composables)、[Utils](https://nuxt.com/docs/api/utils) のセクションを参照してください。
 
 また、Nuxt では明示的なインポートもサポートしており、この場合は `#import` からインポートすることが可能です。
