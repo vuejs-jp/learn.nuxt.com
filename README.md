@@ -18,24 +18,23 @@ This repository is sponsored by [NuxtLabs Japan](https://zenadvisor.io/nuxtlabs-
 
 - https://github.com/nuxt/learn.nuxt.com/pull/217
 
-リポジトリ統合の様子は、下記YouTubeライブ配信でも紹介されています：
+リポジトリ統合の様子は、下記 YouTube ライブ配信でも紹介されています：
 
 - https://www.youtube.com/live/IL5dHHIxwhM?feature=share
 
-
 ## 📝 背景
 
-この日本語版リポジトリは、Nuxt公式チュートリアルの内容を日本語話者向けのハンズオンセミナーで活用することを目的に、Nuxt公式リポジトリをforkして翻訳を開始したものです。  
-プロジェクト立ち上げの背景については、以下のnote記事をご参照ください：  
+この日本語版リポジトリは、Nuxt 公式チュートリアルの内容を日本語話者向けのハンズオンセミナーで活用することを目的に、Nuxt 公式リポジトリを fork して翻訳を開始したものです。
+プロジェクト立ち上げの背景については、以下の note 記事をご参照ください：
 
 - https://note.com/ubugeeei/n/n2ac2b02043da
 
 ## 📦 現在のステータス
 
-このリポジトリはアーカイブされ、今後のメンテナンスは行われません。  
-参考資料として引き続き閲覧可能ですが、IssueやPull Requestの作成などはできなくなります。
+このリポジトリはアーカイブされ、今後のメンテナンスは行われません。
+参考資料として引き続き閲覧可能ですが、Issue や Pull Request の作成などはできなくなります。
 
-今後は Nuxt公式リポジトリをご利用ください：
+今後は Nuxt 公式リポジトリをご利用ください：
 
 - https://github.com/nuxt/learn.nuxt.com
 
