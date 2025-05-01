@@ -1,3 +1,11 @@
+> [!IMPORTANT]
+>
+> このリポジトリは [Nuxt 公式リポジトリ（nuxt/learn.nuxt.com）](https://github.com/nuxt/learn.nuxt.com) にマージされました。\
+> 詳しくは下記をご覧ください！
+>
+> This repository has been merged into the [official Nuxt repository (nuxt/learn.nuxt.com)](https://github.com/nuxt/learn.nuxt.com). \
+> For more details, please see below!
+
 # Nuxt Tutorial Playground (ja)
 
 This repository is a clone of https://github.com/nuxt/learn.nuxt.com and is a Japanese version project.\
